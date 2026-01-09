@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import SummaryCards from "./SummaryCards";
 import EmployeeTable from "./EmployeeTable";
 import Filters from "./Filters";
@@ -10,6 +10,7 @@ import { useAuth } from "../../context/AuthContext";
 const Dashboard = () => {
     const { logout } = useAuth();
 const navigate = useNavigate();
+const printRef = useRef();
 
 const handleLogout = () => {
   logout();
@@ -112,6 +113,9 @@ const handleLogout = () => {
       }}>
         Add Employee
       </button>
+<button onClick={() => window.print()}>
+  Print Employees
+</button>
 
       {showForm && (
         <EmployeeForm
@@ -133,12 +137,15 @@ const handleLogout = () => {
         setStatusFilter={setStatusFilter}
       />
 
-      <EmployeeTable
-        employees={filteredEmployees}
-        onDelete={handleDelete}
-        onToggle={toggleStatus}
-        onEdit={handleEditClick}
-      />
+     <div ref={printRef} className="print-section">
+  <EmployeeTable
+    employees={filteredEmployees}
+    onDelete={handleDelete}
+    onToggle={toggleStatus}
+    onEdit={handleEditClick}
+  />
+</div>
+
     </div>
   );
 };
