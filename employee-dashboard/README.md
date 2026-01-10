@@ -1,16 +1,118 @@
-# React + Vite
+# Employee Management Dashboard (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Project Overview
+The Employee Management Dashboard is a React.js application that allows users to manage employee records with authentication.  
+It includes features such as login/logout, employee CRUD operations, search & filtering, status management, and printing employee data.
 
-Currently, two official plugins are available:
+This project is built as part of a React.js assignment focusing on component structure, state management, UI/UX, and basic authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Authentication
+- Login page with mock authentication
+- Protected dashboard route
+- Logout functionality
+- Dashboard access restricted without login
 
-## Expanding the ESLint configuration
+###  Dashboard Summary
+- Total number of employees
+- Active vs Inactive employee count
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  Employee Management
+- Add new employee
+- Edit existing employee
+- Delete employee (with confirmation)
+- Toggle Active / Inactive status
+- Print employee list
+
+###  Employee Form
+- Full Name
+- Gender
+- Date of Birth
+- State (Dropdown)
+- Profile Image upload with preview
+- Active / Inactive status
+- Form validation
+- Reusable form for Add & Edit
+
+###  Search & Filters
+- Search employees by name
+- Filter by gender
+- Filter by active/inactive status
+- Combined filtering supported
+
+###  Print
+- Print employee list using browser print
+
+###  UI / UX
+- Clean and modern layout
+- Proper spacing and typography
+- Empty states handled
+- Responsive and readable design
+
+---
+
+##  Tech Stack
+
+- React.js
+- React Router DOM
+- Context API (Authentication)
+- JavaScript (ES6+)
+- Vite
+- CSS
+
+---
+
+##  Folder Structure
+
+src/
+│
+├── components/
+│ ├── auth/
+│ │ └── Login.jsx
+│ │
+│ ├── Dashboard/
+│ │ ├── Dashboard.jsx
+│ │ ├── SummaryCards.jsx
+│ │ ├── EmployeeTable.jsx
+│ │ └── Filters.jsx
+│ │
+│ └── EmployeeForm/
+│ └── EmployeeForm.jsx
+│
+├── context/
+│ └── AuthContext.jsx
+│
+├── routes/
+│ └── ProtectedRoute.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+
+---
+
+##  How to Run the Project Locally
+
+###  Clone the repository
+```bash
+git clone <https://github.com/mayurshinde6776/employee-management-dashboard.git >
+
+cd employee-management-dashboard
+
+ 1 Install dependencies
+npm install
+
+ 2 Start development server
+npm run dev
+
+3 Open in browser
+http://localhost:5173
+
+4 Login Credentials (Mock)
+
+Email: admin@example.com
+Password: admin123

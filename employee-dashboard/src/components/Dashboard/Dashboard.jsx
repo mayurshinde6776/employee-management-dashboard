@@ -25,7 +25,7 @@ const Dashboard = () => {
 
     const [employees, setEmployees] = useState([
         {
-            id: 1,
+            id: 1768056112101,
             name: "Rahul Sharma",
             gender: "Male",
             dob: "1995-06-15",
@@ -34,7 +34,7 @@ const Dashboard = () => {
             image: "https://via.placeholder.com/40"
         },
         {
-            id: 2,
+            id: 1768056112103,
             name: "Priya Verma",
             gender: "Female",
             dob: "1998-02-10",
