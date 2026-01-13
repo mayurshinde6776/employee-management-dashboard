@@ -25,6 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./employee-dashboard
+          file: ./employee-dashboard/Dockerfile
           push: true
           tags: mayurdev0505/employee-dashboard:latest
